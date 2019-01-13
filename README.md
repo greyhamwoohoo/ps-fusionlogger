@@ -5,7 +5,7 @@ A PowerShell Module for configuring Assembly Binding Log Viewer (fuslogvw).
 Mostly: to learn the lifecycle of simple PowerShell Module development with Pester and Acceptance Test-Driven Development
 
 ## Background
-The Microsoft Tool 'Fuslogvw.exe' is used for configuring and viewing Fusion logs. The viewer can be used to troubleshoot SxS Configuration / Binding Errors. This Module provides a PowerShell wrapper around those registry entries and manual UI. 
+The Microsoft Tool 'Fuslogvw.exe' is used for configuring and viewing Fusion logs. The viewer can be used to show all Assembly Bindings and troubleshoot SxS Configuration / Binding Errors. This Module provides a PowerShell wrapper around those registry entries and manual UI Configuration. 
 
 NOTE: Fusion Logger (Fuslogvw.exe - if enabled) will impact performance of your system. Be sure to call Disable-FusionLogger after using it. Consider developing / testing this in a virtual machine.  
 
@@ -35,6 +35,11 @@ npm install nodemon -g<br>
 nodemon --watch FusionLogger --exec powershell -File .\atdd-all.ps1
 </code>
 
+To invoke Pester directly as a one-off:
+<br><br><code>
+CD FusionLogger<br>
+Invoke-Pester -CodeCoverageOutputFileFormat JaCoCo -CodeCoverage (Get-ChildItem *.ps1 -Recurse).Where{ !$_.Name.Contains(".Tests.") }
+</code>
 
 ## References
 | Description | Link |
