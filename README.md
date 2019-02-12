@@ -22,7 +22,7 @@ Import-Module FusionLogger\FusionLogger.psm1
 | To collect all Binding Failures to C:\ts\fuslog | Enable-FusionLogger -LogPath "C:\ts\fuslog" |
 | To collect ALL bindings (success/failure) to C:\woo\hoo | Enable-FusionLogger -LogPath "C:\woo\hoo" -Log "All"
 | To collect Exception Text to C:\woo\hoo | Enable-FusionLogger -LogPath "C:\woo\hoo" -Log "ExceptionText"
-| To include Immerive Logging | Add -LogImmersive to any of the above parameters |
+| To include Immersive Logging | Add -LogImmersive to any of the above parameters |
 
 ## Testing and Development
 This module makes changes to your registry.  
@@ -30,16 +30,16 @@ This module makes changes to your registry.
 I tend to develop DSC and PowerShell Modules on a virtual machine and use 'nodemon' to watch for changes and execute my tests on every file change. 
 
 From this repository root, execute:
-<br><br><code>
-npm install nodemon -g<br>
+```
+npm install nodemon -g
 nodemon --watch FusionLogger --exec powershell -File .\atdd-all.ps1
-</code>
+```
 
 To invoke Pester directly as a one-off:
-<br><br><code>
-CD FusionLogger<br>
+```
+CD FusionLogger
 Invoke-Pester -CodeCoverageOutputFileFormat JaCoCo -CodeCoverage (Get-ChildItem *.ps1 -Recurse).Where{ !$_.Name.Contains(".Tests.") }
-</code>
+```
 
 ## References
 | Description | Link |
