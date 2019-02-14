@@ -1,3 +1,5 @@
+![Build Status](https://greyhamwoohoo.visualstudio.com/FusionLogger/_apis/build/status/FusionLogger-Main?branchName=master)
+
 # ps-fusionlogger
 A PowerShell Module for configuring Assembly Binding Log Viewer (fuslogvw). 
 
