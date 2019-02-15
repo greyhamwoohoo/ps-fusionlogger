@@ -30,7 +30,7 @@ CompanyName = 'GreyhamWooHoo'
 Copyright = '(c) 2019 GreyhamWooHoo. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Wrapper around Fuslogvw.exe (Fusion Logger)'
+Description = 'Configure Fusion Logger from PowerShell (instead of: fuslogvw.exe)'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '3.0'
@@ -95,7 +95,7 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        # Tags = @()
+        Tags = @("Troubleshooting", "Diagnostics", "SxS")
 
         # A URL to the license for this module.
         LicenseUri = 'https://github.com/greyhamwoohoo/ps-fusionlogger/blob/master/LICENSE'
@@ -107,7 +107,7 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        # ReleaseNotes = ''
+        ReleaseNotes = 'First release'
 
     } # End of PSData hashtable
 

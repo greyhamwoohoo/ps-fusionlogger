@@ -1,0 +1,20 @@
+{
+  "name": "ps-fusionlogger",
+  "version": "1.0.0",
+  "description": "A PowerShell Module for configuring Assembly Binding Log Viewer (fuslogvw).",
+  "scripts": {
+    "atdd": "nodemon --watch FusionLogger --exec powershell -File .\\atdd-all.ps1",
+    "test": "powershell -Command \"CD FusionLogger; Invoke-Pester -CodeCoverageOutputFileFormat JaCoCo -CodeCoverage (Get-ChildItem *.ps1 -Recurse).Where{ !$_.Name.Contains('.Tests.') }\"",
+    "analyze": "powershell -Command \"CD FusionLogger; Invoke-ScriptAnalyzer -Path . -Recurse -Severity Warning,Error -EnableExit\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greyhamwoohoo/ps-fusionlogger.git"
+  },
+  "author": "GreyhamWooHoo",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/greyhamwoohoo/ps-fusionlogger/issues"
+  },
+  "homepage": "https://github.com/greyhamwoohoo/ps-fusionlogger#readme"
+}
