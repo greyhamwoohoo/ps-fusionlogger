@@ -3,6 +3,12 @@
 # ps-fusionlogger
 A PowerShell Module for configuring Assembly Binding Log Viewer (fuslogvw). 
 
+## PowerShell Gallery
+To install the latest version of the module from PowerShell Gallery, run:
+```
+Install-Module FusionLogger
+```
+
 ## Why?
 Mostly: to learn the lifecycle of simple PowerShell Module development with Pester and Acceptance Test-Driven Development
 
